@@ -1,15 +1,21 @@
        IDENTIFICATION DIVISION.
+       *> In this section, you identify the program and the author.
        PROGRAM-ID.  coboltut.
        AUTHOR. Armin.
        DATE-WRITTEN. April 24 2023
        ENVIRONMENT DIVISION.
+         *> In this section, you specify the configuration of your system.
        CONFIGURATION SECTION.
+       *> In this section, you specify the special names that you will use in your program.
        SPECIAL-NAMES. 
            CLASS PassingScore IS "A" THRU "C".
 
        DATA DIVISION.
+         *> In this section, you define the data that you will use in your program.
        FILE SECTION. 
+         *> In this section, you define the files that you will use in your program.
        WORKING-STORAGE SECTION. 
+       *> In this section, you define the variables that you will use in your program.
        01 UserName PIC X(20) VALUE "Armin".
        01 Num1 PIC 9 VALUE ZEROS.
        01 Num2 PIC 9 VALUE ZEROS.
@@ -18,7 +24,7 @@
            02 SSArea PIC 999.
            02 SSGroup PIC 99.
            02 SSSerial PIC 9999.
-       01 ans PIC S99V99 VALUE 0.
+       01 ans PIC S99V99 VALUE 0. *> S99V99 is a signed numeric with 2 decimal places
        01 Rem PIC 9V99 VALUE 0.
 
        01 Age PIC 99 VALUE 0.
@@ -36,6 +42,7 @@
 
 
        PROCEDURE DIVISION.
+         *> In this section, you write the statements that you will use in your program.
            DISPLAY "What is your name?".
            ACCEPT UserName.
            DISPLAY "Hello " UserName.
