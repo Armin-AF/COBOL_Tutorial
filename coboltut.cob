@@ -135,6 +135,30 @@
            *> AND
            *> OR
 
+           *> Examples of Logical/Conditional Operators
+
+           IF Age LESS THAN 5 THEN
+               DISPLAY "You are a baby."
+           ELSE IF Age LESS THAN 18 THEN
+               DISPLAY "You are a child."
+           ELSE IF Age LESS THAN 65 THEN
+               DISPLAY "You are an adult."
+           ELSE
+               DISPLAY "You are a senior citizen."
+           END-IF
+
+           IF Age >= 18 AND Age < 65 THEN
+               DISPLAY "You are an adult."
+           ELSE
+               DISPLAY "You are not an adult."
+           END-IF
+
+           IF Age < 18 OR Age >= 65 THEN
+             DISPLAY "You are not an adult."
+           ELSE
+             DISPLAY "You are an adult."
+           END-IF
+
 
 
            STOP RUN.
