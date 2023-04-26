@@ -178,6 +178,33 @@
              DISPLAY "Score is numeric."
            END-IF
 
+           IF Age > 18 THEN
+                SET CanVote TO TRUE
+           ELSE
+                SET CannotVote TO TRUE
+           END-IF
+
+           *> Evaluate statement
+           DISPLAY "Enter single number or X to exit: "
+           ACCEPT TestNumber
+           PERFORM UNTIL NOT ANumber 
+                EVALUATE TRUE
+                WHEN IsPrime
+                        DISPLAY "The number is prime."
+                WHEN IsOdd
+                        DISPLAY "The number is odd."
+                WHEN IsEven
+                        DISPLAY "The number is even."
+                WHEN LessThan5
+                        DISPLAY "The number is less than 5."
+                WHEN OTHER
+                        DISPLAY "The number is greater than 5."
+                END-EVALUATE
+                DISPLAY "Enter single number or X to exit: "
+                ACCEPT TestNumber
+            END-PERFORM
+
+
 
 
            STOP RUN.
