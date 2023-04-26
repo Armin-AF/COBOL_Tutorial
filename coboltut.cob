@@ -159,6 +159,25 @@
              DISPLAY "You are an adult."
            END-IF
 
+           IF Score IS PassingScore THEN
+               DISPLAY "You passed."
+           ELSE
+               DISPLAY "You failed."
+           END-IF
+
+           IF Score IS NOT PassingScore THEN
+             DISPLAY "You failed."
+           ELSE
+             DISPLAY "You passed."
+           END-IF
+
+           *> NUMERIC ALPHABETIC ALPHABETIC-UPPER ALPHABETIC-LOWER ALPHANUMERIC
+           IF Score IS NOT NUMERIC THEN
+             DISPLAY "Score is not numeric."
+           ELSE
+             DISPLAY "Score is numeric."
+           END-IF
+
 
 
            STOP RUN.
