@@ -19,6 +19,7 @@
        01 UserName PIC X(20) VALUE "Armin".
        01 Num1 PIC 9 VALUE ZEROS.
        01 Num2 PIC 9 VALUE ZEROS.
+       01 Sum1 PIC 99 VALUE 0.
        01 Total PIC 99 VALUE 0.
        01 SSNum.
            02 SSArea PIC 999.
@@ -42,7 +43,8 @@
 
 
        PROCEDURE DIVISION.
-         *> In this section, you write the statements that you will use in your 
+       *> In this section, you write the statements that you will use in your 
+
            DISPLAY "What is your name?".
            ACCEPT UserName.
            DISPLAY "Hello " UserName.
@@ -203,6 +205,15 @@
                 DISPLAY "Enter single number or X to exit: "
                 ACCEPT TestNumber
             END-PERFORM
+
+
+            *> Subroutines/ Linkage Section
+           CALL 'GETSUM' USING Num1, Num2, Sum1.
+           DISPLAY Num1 " + " Num2 " = " Sum1.
+
+           
+           
+
 
 
 
