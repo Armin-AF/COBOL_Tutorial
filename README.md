@@ -1,8 +1,7 @@
 # COBOL Tutorial
 
 
-COBOL_Tutorial is my practice and cheatsheet area for learning COBOL. This beginner-friendly GitHub repo provides a comprehensive tutorial on COBOL programming language, covering syntax, data types, variables, control structures, procedures, file handling, and debugging techniques.
-
+COBOL_Tutorial is my practice and cheatsheet area for learning COBOL, based on the source material from "COBOL Tutorial: Learn COBOL in One Video" by Derek Banas and "Beginning COBOL for Programmers" by Michael Coughlan. This beginner-friendly GitHub repo provides a comprehensive tutorial on COBOL programming language, covering syntax, data types, variables, control structures, procedures, file handling, and debugging techniques.
 
 ## Table of Contents
 
