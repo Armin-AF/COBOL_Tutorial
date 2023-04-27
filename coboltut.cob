@@ -21,6 +21,7 @@
        01 Num2 PIC 9 VALUE ZEROS.
        01 Sum1 PIC 99 VALUE 0.
        01 Total PIC 99 VALUE 0.
+       01 Counter PIC 99 VALUE 0.
        01 SSNum.
            02 SSArea PIC 999.
            02 SSGroup PIC 99.
@@ -210,6 +211,31 @@
             *> Subroutines/ Linkage Section
            CALL 'GETSUM' USING Num1, Num2, Sum1.
            DISPLAY Num1 " + " Num2 " = " Sum1.
+
+
+           *> While Loop
+
+           DISPLAY "Enter a number: "
+           ACCEPT Num1
+           SET Sum1 TO 0
+           SET Counter TO 1
+           PERFORM IF Counter <= Num1
+               ADD Counter TO Sum1
+               ADD 1 TO Counter
+           END-PERFORM
+
+           DISPLAY "The sum of the numbers from 1 to " Num1 " is " Sum1.
+
+              *> Do While Loop
+           
+           DISPLAY "Enter a number: "
+           ACCEPT Num1
+           SET Sum1 TO 0
+           SET Counter TO 1
+           PERFORM
+                ADD Counter TO Sum1
+                ADD 1 TO Counter
+           END-PERFORM IF Counter > Num1
 
            
            
