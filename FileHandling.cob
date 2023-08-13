@@ -10,7 +10,9 @@
 
        DATA DIVISION.
        FILE SECTION.
-       FD EMPLOYEE-FILE.
+       FD EMPLOYEE-FILE
+            BLOCK CONTAINS 17 CHARACTERS
+            RECORD CONTAINS 17 CHARACTERS.
        01 EMPLOYEE-RECORD.
            05 EMP-ID            PIC 9(3).
            05 EMP-NAME          PIC X(10).
