@@ -12,6 +12,9 @@
        UNSTRING full-name DELIMITED BY ' ' INTO first-name last-name.
        DISPLAY first-name.  
 
+       DISPLAY FUNCTION LENGTH(first-name).
+       DISPLAY FUNCTION UPPER-CASE(first-name).
+       DISPLAY FUNCTION LOWER-CASE(first-name).
 
        STOP RUN.
             
