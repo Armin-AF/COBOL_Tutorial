@@ -27,7 +27,6 @@
                MOVE 3000 TO BASE-PREMIUM
            ELSE
                DISPLAY "INVALID INSURANCE TYPE"
-               STOP RUN.
 
            COMPUTE TOTAL-PREMIUM = BASE-PREMIUM + (AGE * 10).
 
